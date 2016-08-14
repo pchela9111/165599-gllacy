@@ -7,23 +7,10 @@
     </head>
 
     <body>
-        <!--Переключатель для слайдера-->
-        <input type="radio" id="btn-1" name="toggle" checked>
-        <input type="radio" id="btn-2" name="toggle">
-        <input type="radio" id="btn-3" name="toggle">
-        <div class="slider-controls">
-            <label for="btn-1"></label>
-            <label for="btn-2"></label>
-            <label for="btn-3"></label>
-        </div>
-
         <header class="main-header">
             <div class="conteiner">
-                <div class="index-logo">
-                    <img src="http://placehold.it/154x64" width="154" height="64" alt="Глейси">
-                </div>
-
                 <nav class="main-navigation">
+                    <img src="http://placehold.it/154x64" width="154" height="64" alt="Глейси">
                     <ul>
                         <li>
                             <a href="#">Каталог</a>
@@ -42,26 +29,31 @@
 
                 <section class="user-header">
                     <div class="search">
-                        <div class="search-image"></div>
+                        <a class="btn btn-white" href="#"></a>
                         <div class="search-content">
                             <form class="user field" action="/echo" method="get">
                                 <input type="search" name="search" placeholder="Что ищем?">
                             </form>
                         </div>
                     </div>
+
                     <div class="user-input">
-                        <a href="#">Вход</a>
+                        <a class="btn btn-white" href="#">Вход</a>
                         <form class="user field" action="/echo" method="post">
                             <input type="email" name="email" placeholder="Электронная почта" required>
                             <input type="password" name="password" placeholder="Пароль" required>
-                            <button class="btn user-btn" type="submit" name="user-input">Войти</button>
-                            <a href="#">Забыли пороль?</a>
-                            <a href="#">Новая регистрация</a>
+                            <div class="wrapper">
+                                <button class="btn" type="submit" name="user-input">Войти</button>
+                                <div class="block-right">
+                                    <a class="underline-black" href="#">Забыли пороль?</a>
+                                    <a class="underline-black" href="#">Новая регистрация</a>
+                                </div>
+                            </div>
                         </form>
                     </div>
 
                     <div class="basket">
-                        <p class="empty">Пусто</p>
+                        <a class="btn btn-white" href="#">пусто</a>
                     </div>
 
                     <div class="header-contacts">
@@ -71,6 +63,7 @@
                 </section>
             </div>
         </header>
+
         <main>
             <div class="conteiner">
                 <section class="show-slider">
@@ -86,21 +79,27 @@
                         <h2>Пломбир с помадкой и клубничный щербет</h2>
                         <a class="btn slider-btn" href="#">Давайте оба!</a>
                     </div>
+
+                    <!--Переключатель для слайдера-->
+                    <input type="radio" id="btn-1" name="toggle" checked>
+                    <input type="radio" id="btn-2" name="toggle">
+                    <input type="radio" id="btn-3" name="toggle">
+                    <div class="slider-controls">
+                        <label for="btn-1"></label>
+                        <label for="btn-2"></label>
+                        <label for="btn-3"></label>
+                    </div>
                 </section>
 
                 <section class="promo">
                     <article class="promo-raspberry">
                         <h2 class="promo-title">Малинка даром!</h2>
-                        <p>
-                            При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.
-                        </p>
+                        <p>При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
                         <a class="btn promo-btn" href="#">Хочу варенье!</a>
                     </article>
                     <article class="promo-chocolate">
                         <h2 class="promo-title">Шоколадки даром!</h2>
-                        <p>
-                            При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.
-                        </p>
+                        <p>При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.</p>
                         <a class="btn promo-btn" href="#">Хочу шоколадки!</a>
                     </article>
                 </section>
@@ -114,6 +113,7 @@
                                 <a class="catalog-name" href="#">Сливочное с апельсиновым джемом и циторусовой стружкой</a>
                             </figcaption>
                         </figure>
+                        <a class="btn hidden" href="#">Быстрый просмотр</a>
                     </article>
                     <article>
                         <figure>
@@ -123,6 +123,7 @@
                                 <a class="catalog-name" href="#">Сливочно-кофейное с кусочками шоколада</a>
                             </figcaption>
                         </figure>
+                        <a class="btn hidden" href="#">Быстрый просмотр</a>
                     </article>
                     <article>
                         <figure>
@@ -132,6 +133,7 @@
                                 <a class="catalog-name" href="#">Сливочно-клубничное с присыпкой из белого шоколада</a>
                             </figcaption>
                         </figure>
+                        <a class="btn hidden" href="#">Быстрый просмотр</a>
                     </article>
                     <article>
                         <figure>
@@ -141,23 +143,20 @@
                                 <a class="catalog-name" href="#">Сливочное крем-брюле с карамельной подливкой</a>
                             </figcaption>
                         </figure>
+                        <a class="btn hidden" href="#">Быстрый просмотр</a>
                     </article>
                 </section>
 
                 <section class="about">
                     <h2>Магазин Глейси &#8212; это онлайн и офлайн магазин по продаже мороженного собственного производства на развес</h2>
-                    <p class="ice">Все наше мороженное изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.</p>
-                    <p class="cow">Закупка ингредиентов производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.</p>
-                    <p class="leaf">Для приготовления мороженного используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты произведены из натурального, экологически чистого сырья.</p>
-                    <p class="temperature">Доставка нашего мороженного до заказчиков осуществляется в специальном термопаке, которая не дает мороженному растаять в пути и позволяет ему сохранить свой превосходный вкус.</p>
-                </section>
-
-                <section class="about">
-                    <h2>Магазин Глейси &#8212; это онлайн и офлайн магазин по продаже мороженного собственного производства на развес</h2>
-                    <p class="ice">Все наше мороженное изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.</p>
-                    <p class="cow">Закупка ингредиентов производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.</p>
-                    <p class="leaf">Для приготовления мороженного используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты произведены из натурального, экологически чистого сырья.</p>
-                    <p class="temperature">Доставка нашего мороженного до заказчиков осуществляется в специальном термопаке, которая не дает мороженному растаять в пути и позволяет ему сохранить свой превосходный вкус.</p>
+                    <div class="about-text">
+                        <p class="ice">Все наше мороженное изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.</p>
+                        <p class="leaf">Для приготовления мороженного используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты произведены из натурального, экологически чистого сырья.</p>
+                    </div>
+                    <div class="about-text block-right">
+                        <p class="cow">Закупка ингредиентов производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.</p>
+                        <p class="temperature">Доставка нашего мороженного до заказчиков осуществляется в специальном термопаке, которая не дает мороженному растаять в пути и позволяет ему сохранить свой превосходный вкус.</p>
+                    </div>
                 </section>
 
                 <section class="new">
@@ -202,16 +201,15 @@
                 </section>
 
                 <section class="footer-business-info">
-                    <strong class="business-info-left">&#10084; <a href="#">Для поставщиков</a></strong>
+                    <span class="bolder">&#10084;</span> <a class="bolder" href="#">Для поставщиков</a>
                     <a href="#">О производстве</a>
-                    <p class="business-info-right">
-                        <a href="#">Наши документы</a>
-                        <a href="#">Экологические стандарты</a>
-                    </p>
+                    <a href="#">Наши документы</a>
+                    <a href="#">Экологические стандарты</a>
                 </section>
+
                 <section class="footer-copyright">
                     <a href="https://htmlacademy.ru/"><img src="http://placehold.it/108x37" width="108" height="37" alt="HTML Academy"></a>
-                    <p>Сделано в <a href="https://htmlacademy.ru/">HTML Academy</a> &#169; 2016</p>
+                    Сделано в <a href="https://htmlacademy.ru/">HTML Academy</a> &#169; 2016
                 </section>
             </div>
         </footer>
