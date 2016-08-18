@@ -1,0 +1,15 @@
+body {
+    font-size: 16px;
+    line-height: 22px;
+    font-family: "Roboto", Helvetica, Arial, sans-serif;
+    font-weight: 700;
+    color: #ffffff;
+}
+h1 {
+    font-size: 35px;
+    line-height: 41px;
+}
+h2 {
+    font-size: 60px;
+    line-height: 60,35px;
+}
