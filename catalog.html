@@ -100,7 +100,7 @@
             <section class="filter">
                 <form action="/echo" method="post">
                     <div class="filter-item-left">
-                        <label filter-title for="selection">Сортировка:</label>
+                        <label class="filter-title" for="selection">Сортировка:</label>
                         <select class="filter-item" id="selection" name="selection">
                             <option>по популярности</option>
                             <option>сначала недорогие</option>
@@ -110,7 +110,7 @@
                     </div>
 
                     <div class="filter-item-left">
-                        <div class="filter-title">Цена: 100 руб. &ndash; 500 руб.</div>
+                        <p class="filter-title">Цена: 100 руб. &ndash; 500 руб.</p>
                         <div class="range-controls">
                             <div class="scale">
                                 <div class="bar"></div>
@@ -144,8 +144,8 @@
                         <label for="filler-4"> сиропы</label>
                         <input type="checkbox" id="filler-5" name="filler" value="jam">
                         <label for="filler-5"> джемы</label>
-                        <input class="btn btn-white filter-btn" type="submit" value="Применить">
-                    </div>
+                        </div>
+                    <input class="btn btn-white filter-btn" type="submit" value="Применить">
                 </form>
             </section>
 
@@ -254,7 +254,7 @@
 
             <section class="footer-copyright">
                 <a href="https://htmlacademy.ru/"><img src="http://placehold.it/108x37" width="108" height="37" alt="HTML Academy"></a>
-                Сделано в <a href="https://htmlacademy.ru/">HTML Academy</a> &#169; 2016
+               <p>Сделано в <a href="https://htmlacademy.ru/">HTML Academy</a> &#169; 2016</p> 
             </section>
         </div>
     </footer>
