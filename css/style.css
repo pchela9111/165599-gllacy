@@ -5,11 +5,515 @@ body {
     font-weight: 700;
     color: #ffffff;
 }
-h1 {
+.container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 1146px;
+    padding: 0 27px;
+    margin: 0 auto;
+    /* Только для оформления сетки */
+    min-height: 70px;
+}
+
+/* ГЛАВНАЯ*/
+
+
+/* для шапки */
+
+.main-header .container {
+    position: relative;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+.main-navigation {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-item-align: start;
+    align-self: flex-start;
+    width: 600px;
+    /* Только для оформления сетки */
+    min-height: 64px;
+}
+.index-logo {
+    width: 154px;
+    height: 64px;
+}
+.main-menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    list-style: none;
+    margin: 0;
+}
+.main-menu li {
+    padding-top: 25px;
+}
+.main-menu > li {
+    position: relative;
+}
+.main-menu .sub-menu {
+    position: absolute;
+    list-style: none;
+}
+.main-menu > li:hover .popup {
+    display: block;
+}
+.popup {
+    display: none;
+}
+.user-header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-item-align: start;
+    align-self: flex-start;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    width: 300px;
+    /* Только для оформления сетки */
+    min-height: 90px;
+    margin-left: auto;
+    padding-top: 20px;
+}
+.user-search a {
+    display: block;
+    width: 17px;
+    height: 17px;
+    padding: 7px;
+    /* Только для оформления сетки */
+    outline: 1px solid white;
+}
+.header-contacts,
+.user-input,
+.user-basket {
+    margin-left: auto;
+    /* Только для оформления сетки */
+    outline: 1px solid white;
+}
+.user-input {
+    padding: 5px 16px;
+}
+
+/* Долго мучала этот момент, не могла прижать абзац в .header-contacts к верхнему блоку. Сам div .header-contacts перенесен из общего ряда div-ов и растягивался по высоте, и соответсвенно растягивал всю шапку. Помог только вот этот способ с обнулением отступов. Ести ли другой вариант?*/
+
+.header-contacts p {
+    margin: 0;
+    padding-top: 15px;
+}
+.header-contacts a {
+    font-size: 22px;
+    line-height: 24px;
+}
+
+/* для  main*/
+
+main .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+/* для слайдера*/
+
+.show-slider {
+    width: 1145px;
+    /* Только для оформления сетки */
+    min-height: 530px;
+}
+.slider {
+    position: absolute;
+    /* Пока не совсем разобралась со слайдером, от какого блока его лучше позиционировать, то есть кому назначить relative*/
+    width: 1145px;
+    /* Только для оформления сетки */
+    min-height: 530px;
+}
+
+/* для промо-блок */
+
+.promo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    /* Только для оформления сетки */
+    height: 229px;
+    margin-bottom: 40px;
+}
+.promo-raspberry,
+.promo-chocolate {
+    width: 560px;
+    /* Только для оформления сетки */
+    min-height: 229px;
+    /* Только для оформления сетки */
+    outline: 3px solid coral;
+}
+.promo-title {
     font-size: 35px;
     line-height: 41px;
 }
-h2 {
-    font-size: 60px;
-    line-height: 60,35px;
+
+/* для каталог-главная и каталога */
+
+.catalog {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+.item-catalog {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    position: relative;
+    width: 267px;
+}
+.item-catalog img {
+    width: 267px;
+    height: 267px;
+}
+.item-catalog a {
+    display: none;
+}
+.item-catalog:hover a {
+    display: block;
+}
+.catalog-price {
+    position: absolute;
+}
+.catalog-name {
+   text-align: center;
+    padding-bottom: 20px;
+}
+/* for about */
+
+.about {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+.about h3 {
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    font-size: 24px;
+    line-height: 30px;
+    color: #333333;
+}
+.about p {
+    width: 560px;
+}
+
+/* блог и форма подписки*/
+
+.new {
+    min-height: 220px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+.blog {
+    width: 560px;
+    /* Только для оформления сетки */
+    outline: 3px solid coral;
+}
+.subscription {
+    width: 560px;
+    /* Только для оформления сетки */
+    outline: 3px solid coral;
+}
+
+/* карта*/
+
+.map {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    min-height: 430px;
+}
+.address-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 1146px;
+    margin: auto;
+}
+.address {
+    margin-left: auto;
+    /* Только для оформления сетки */
+    width: 300px;
+    /* Только для оформления сетки */
+    min-height: 310px;
+    /* Только для оформления сетки */
+    outline: 3px solid coral;
+}
+
+/* для блока обратной связи*/
+
+.feedback-popup {
+    display: none;
+    /* width: 475px;*/
+}
+
+/* для футера */
+
+.main-footer .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    /* Только для оформления сетки */
+    min-height: 100px;
+}
+.footer-social {
+    width: 265px;
+    /* Только для оформления сетки */
+    min-height: 60px;
+    /* Только для оформления сетки */
+    outline: 3px solid coral;
+}
+.footer-business-info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    width: 330px;
+    /* Только для оформления сетки */
+    outline: 3px solid coral;
+}
+.footer-copyright {
+    width: 267px;
+    /* Только для оформления сетки */
+    outline: 3px solid coral;
+}
+
+/* КАТАЛОГ*/
+
+/* для шапки */
+
+.navigation {
+    width: 600px;
+    /* Только для оформления сетки */
+    min-height: 115px;
+}
+.breadcrumbs {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    list-style: none;
+    margin: 0;
+}
+.main-title {
+    /* Только для оформления сетки */
+    min-height: 40px;
+    margin-bottom: 30px;
+}
+.main-title h1 {
+    margin: 0;
+    padding: 0;
+    font-size: 35px;
+    line-height: 41px;
+}
+.filter {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    width: 880px;
+    margin: 0;
+    padding: 0;
+    /* Только для оформления сетки */
+    height: 130px;
+    margin-bottom: 40px;
+}
+.filter input[type="submit"] {
+    /* Только для оформления сетки */
+    height: 35px;
+}
+.paginator {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    min-height: 28px;
+    margin-top: 40px;
+    margin-bottom: 30px;
+}
+
+/*======================================
+ Системное оформление - не изменять
+=======================================*/
+
+body {
+    padding: 3px;
+}
+body > *,
+body > * > *,
+body > * > * > * {
+    position: relative;
+}
+body > *::before,
+body > * > *::before,
+body > * > * > *::before {
+    content: "";
+    position: absolute;
+    height: 24px;
+    padding: 2px 5px;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 24px;
+    font-family: "Courier New", monotype;
+    white-space: nowrap;
+}
+body > *::before {
+    top: -3px;
+    left: -3px;
+}
+body > * > *::before {
+    top: -3px;
+    left: -3px;
+}
+body > * > * > *::before {
+    top: 0;
+    left: 0;
+}
+body > * {
+    background: rgba(0, 128, 0, 0.2);
+    box-shadow: 0 0 0 3px green;
+}
+body > *::before {
+    color: white;
+    background: green;
+}
+body > * > * {
+    background: rgba(255, 45, 82, 0.2);
+    box-shadow: 0 0 0 3px rgb(255, 45, 82);
+}
+body > * > *::before {
+    color: white;
+    background: rgb(255, 45, 82);
+}
+body > * > * > * {
+    background: rgba(234, 255, 45, 0.2);
+    box-shadow: inset 0 0 0 2px rgb(234, 255, 45);
+}
+body > * > * > *::before {
+    color: black;
+    background: rgb(234, 255, 45);
+}
+.main-header::before {
+    content: ".main-header";
+}
+.container::before {
+    content: ".container";
+}
+.main-header .container::before {
+    top: auto;
+    bottom: -28px;
+}
+.navigation::before {
+    content: ".navigation";
+}
+.user-header::before {
+    content: ".user-header";
+}
+.index-logo::before {
+    content: ".index-logo";
+}
+.show-slider::before {
+    content: ".show-slider";
+}
+.promo::before {
+    content: ".promo";
+}
+.promo-raspberry::before {
+    content: ".promo-raspberry";
+    background-color: coral;
+}
+.promo-chocolate::before {
+    content: ".promo-chocolate";
+    background-color: coral;
+}
+.catalog::before {
+    content: ".catalog";
+}
+.about::before {
+    content: ".about";
+}
+.new::before {
+    content: ".new";
+}
+.blog::before {
+    content: ".blog";
+    background-color: coral;
+}
+.subscription::before {
+    content: ".subscription";
+    background-color: coral;
+}
+.map::before {
+    content: ".map";
+}
+.address-container::before {
+    content: ".address-container";
+}
+.address::before {
+    content: ".address";
+    background-color: coral;
+}
+.footer-social::before {
+    content: ".footer-social ";
+    background-color: coral;
+}
+.footer-business-info::before {
+    content: ".footer-business-info";
+    background-color: coral;
+}
+.footer-copyright::before {
+    content: ".footer-copyright";
+    background-color: coral;
+}
+.main-title::before {
+    content: ".main-title";
+}
+.filter::before {
+    content: ".filter";
+}
+.paginator::before {
+    content: ".paginator";
 }
