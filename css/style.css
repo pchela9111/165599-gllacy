@@ -1,9 +1,16 @@
+html,
+body {
+    margin: 0;
+}
 body {
     font-size: 16px;
     line-height: 22px;
     font-family: "Roboto", Helvetica, Arial, sans-serif;
     font-weight: 700;
     color: #ffffff;
+}
+body > input[type="radio"] {
+    display: none;
 }
 .container {
     display: -webkit-box;
@@ -36,6 +43,8 @@ body {
     width: 600px;
     /* Только для оформления сетки */
     min-height: 64px;
+    background: rgba(54, 176, 112, 0.2);
+    box-shadow: inset 0 0 0 2px rgb(54, 176, 112);
 }
 .index-logo {
     width: 154px;
@@ -73,10 +82,12 @@ body {
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     width: 300px;
-    /* Только для оформления сетки */
-    min-height: 90px;
     margin-left: auto;
     padding-top: 20px;
+    /* Только для оформления сетки */
+    min-height: 90px;
+    background: rgba(54, 176, 112, 0.2);
+    box-shadow: inset 0 0 0 2px rgb(54, 176, 112);
 }
 .user-search a {
     display: block;
@@ -96,9 +107,6 @@ body {
 .user-input {
     padding: 5px 16px;
 }
-
-/* Долго мучала этот момент, не могла прижать абзац в .header-contacts к верхнему блоку. Сам div .header-contacts перенесен из общего ряда div-ов и растягивался по высоте, и соответсвенно растягивал всю шапку. Помог только вот этот способ с обнулением отступов. Ести ли другой вариант?*/
-
 .header-contacts p {
     margin: 0;
     padding-top: 15px;
@@ -122,17 +130,91 @@ main .container {
 
 /* для слайдера*/
 
-.show-slider {
-    width: 1145px;
-    /* Только для оформления сетки */
-    min-height: 530px;
+.big-wrapper {
+    background-repeat: no-repeat;
+    background-position: top center;
+    -webkit-transition: background-image 0.5s ease, background-color 0.5s ease;
+    transition: background-image 0.5s ease, background-color 0.5s ease;
 }
-.slider {
-    position: absolute;
-    /* Пока не совсем разобралась со слайдером, от какого блока его лучше позиционировать, то есть кому назначить relative*/
-    width: 1145px;
+.big-wrapper:before,
+.big-wrapper:after {
+    content: "";
+    visibility: hidden;
+}
+.big-wrapper:before,
+.big-wrapper:after {
+    background-image: url("../img/slider-1.png");
+}
+.big-wrapper:after {
+    background-image: url("../img/slider-2.png");
+}
+.show-slider {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    padding-top: 150px;
     /* Только для оформления сетки */
-    min-height: 530px;
+    outline: 3px solid white;
+}
+.first-slide,
+.second-slide,
+.third-slide {
+    display: none;
+}
+.slide-item-1:checked ~ .big-wrapper .first-slide {
+    display: block;
+}
+.slide-item-2:checked ~ .big-wrapper .second-slide {
+    display: block;
+}
+.slide-item-3:checked ~ .big-wrapper .third-slide {
+    display: block;
+}
+.slider-controls {
+    -ms-flex-item-align: start;
+    align-self: flex-start;
+    width: 95px;
+    margin-top: 29px;
+}
+.controls-btn {
+    display: inline-block;
+    width: 17px;
+    height: 17px;
+    margin-right: 4px;
+    background-color: transparent;
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.slide-item-1:checked ~ .big-wrapper .controls-btn-1,
+.slide-item-2:checked ~ .big-wrapper .controls-btn-2,
+.slide-item-3:checked ~ .big-wrapper .controls-btn-3 {
+    background-color: #ffffff;
+}
+.slide-item-1:checked ~ .big-wrapper {
+    background: #849d8f url("../img/slider-1.png") no-repeat center top;
+}
+.slide-item-2:checked ~ .big-wrapper {
+    background: #8996a6 url("../img/slider-2.png") no-repeat center top;
+}
+.slide-item-3:checked ~ .big-wrapper {
+    background: #9d8b84 url("../img/slider-3.png") no-repeat center top;
+}
+.slide-title {
+    width: 670px;
+    margin-top: 105px;
+    font-weight: 900;
+    font-size: 60px;
+    line-height: 61px;
 }
 
 /* для промо-блок */
@@ -146,6 +228,7 @@ main .container {
     justify-content: space-between;
     /* Только для оформления сетки */
     height: 229px;
+    margin-top: 55px;
     margin-bottom: 40px;
 }
 .promo-raspberry,
@@ -172,6 +255,8 @@ main .container {
     justify-content: space-between;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
+    /* Только для оформления сетки */
+    outline: 3px solid coral;
 }
 .item-catalog {
     display: -webkit-box;
@@ -190,6 +275,7 @@ main .container {
 }
 .item-catalog a {
     display: none;
+    position: absolute;
 }
 .item-catalog:hover a {
     display: block;
@@ -198,10 +284,11 @@ main .container {
     position: absolute;
 }
 .catalog-name {
-   text-align: center;
+    text-align: center;
     padding-bottom: 20px;
 }
-/* for about */
+
+/* для about */
 
 .about {
     display: -webkit-box;
@@ -213,11 +300,14 @@ main .container {
     -ms-flex-pack: justify;
     justify-content: space-between;
     margin-bottom: 40px;
+    /* Только для оформления сетки */
+    outline: 3px solid coral;
 }
 .about h3 {
     -webkit-box-flex: 1;
     -ms-flex-positive: 1;
     flex-grow: 1;
+    margin-top: 0;
     font-size: 24px;
     line-height: 30px;
     color: #333333;
@@ -252,25 +342,19 @@ main .container {
 /* карта*/
 
 .map {
+    position: relative;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     min-height: 430px;
 }
-.address-container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    width: 1146px;
-    margin: auto;
-}
 .address {
-    margin-left: auto;
-    /* Только для оформления сетки */
+    position: absolute;
+    top: 65px;
+    right: 377px;
     width: 300px;
     /* Только для оформления сетки */
-    min-height: 310px;
-    /* Только для оформления сетки */
+    min-height: 305px;
     outline: 3px solid coral;
 }
 
@@ -318,6 +402,7 @@ main .container {
 
 /* КАТАЛОГ*/
 
+
 /* для шапки */
 
 .navigation {
@@ -343,7 +428,7 @@ main .container {
     font-size: 35px;
     line-height: 41px;
 }
-.filter {
+.filter form {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -353,11 +438,12 @@ main .container {
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     width: 880px;
-    margin: 0;
-    padding: 0;
     /* Только для оформления сетки */
     height: 130px;
     margin-bottom: 40px;
+    /* Только для оформления сетки */
+    /*Пока не знаю, что тут делать. Все равно все вываливается. Буду делать декоративный элементы, надеюсь, разберусь*/
+    outline: 3px solid coral;
 }
 .filter input[type="submit"] {
     /* Только для оформления сетки */
@@ -379,14 +465,6 @@ main .container {
  Системное оформление - не изменять
 =======================================*/
 
-body {
-    padding: 3px;
-}
-body > *,
-body > * > *,
-body > * > * > * {
-    position: relative;
-}
 body > *::before,
 body > * > *::before,
 body > * > * > *::before {
@@ -439,12 +517,12 @@ body > * > * > *::before {
 .main-header::before {
     content: ".main-header";
 }
-.container::before {
-    content: ".container";
-}
 .main-header .container::before {
     top: auto;
     bottom: -28px;
+}
+.big-wrapper::before {
+    content: ".big-wrapper";
 }
 .navigation::before {
     content: ".navigation";
@@ -458,8 +536,9 @@ body > * > * > *::before {
 .show-slider::before {
     content: ".show-slider";
 }
-.promo::before {
-    content: ".promo";
+.slider::before {
+    content: ".slider";
+    background-color: coral;
 }
 .promo-raspberry::before {
     content: ".promo-raspberry";
@@ -469,14 +548,9 @@ body > * > * > *::before {
     content: ".promo-chocolate";
     background-color: coral;
 }
-.catalog::before {
-    content: ".catalog";
-}
 .about::before {
     content: ".about";
-}
-.new::before {
-    content: ".new";
+    background-color: coral;
 }
 .blog::before {
     content: ".blog";
@@ -496,24 +570,7 @@ body > * > * > *::before {
     content: ".address";
     background-color: coral;
 }
-.footer-social::before {
-    content: ".footer-social ";
-    background-color: coral;
-}
-.footer-business-info::before {
-    content: ".footer-business-info";
-    background-color: coral;
-}
-.footer-copyright::before {
-    content: ".footer-copyright";
-    background-color: coral;
-}
 .main-title::before {
     content: ".main-title";
 }
-.filter::before {
-    content: ".filter";
-}
-.paginator::before {
-    content: ".paginator";
-}
+
