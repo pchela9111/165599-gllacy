@@ -1053,8 +1053,6 @@ main .container {
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
-    /* Только для оформления сетки */
-    outline: 3px solid coral;
 }
 .main-footer {
     padding: 20px 0;
