@@ -8,6 +8,7 @@ body {
     font-family: "Roboto", Helvetica, Arial, sans-serif;
     font-weight: 700;
     color: #ffffff;
+    background-color: #849d8f;
 }
 
 /* общие стили*/
@@ -15,6 +16,7 @@ body {
 a {
     text-decoration: none;
     color: #ffffff;
+    cursor: pointer;
 }
 img {
     max-width: 100%;
@@ -33,7 +35,9 @@ body > input[type="radio"] {
 }
 input[type="search"],
 input[type="password"],
-input[type="email"] {
+input[type="email"],
+input[type="text"],
+textarea {
     font-family: inherit;
     font-size: 14px;
     line-height: 24px;
@@ -74,8 +78,37 @@ button[type="submit"] {
     background: linear-gradient(to bottom, #d84732 0%, #e1613e 100%);
     box-shadow: inset 0 2px 2px rgba(172, 16, 0, 1);
 }
+
+/* Лэйблы */
 .hidden-signature {
     display: none;
+}
+.user-header .signature {
+    display: block;
+    position: absolute;
+    -webkit-transform: translate(13px, -17px);
+    transform: translate(13px, -17px);
+    font-size: 11px;
+    font-weight: normal;
+    color: #5b9ddf;
+}
+.subscription-postal .signature {
+    display: block;
+    position: absolute;
+    -webkit-transform: translate(36px, -20px);
+    transform: translate(36px, -20px);
+    font-size: 11px;
+    font-weight: normal;
+    color: #5b9ddf;
+}
+.modal-field .signature {
+    display: block;
+    position: absolute;
+    -webkit-transform: translate(15px, -20px);
+    transform: translate(15px, -20px);
+    font-size: 11px;
+    font-weight: normal;
+    color: #5b9ddf;
 }
 
 /* ГЛАВНАЯ*/
@@ -85,9 +118,6 @@ button[type="submit"] {
 
 .main-header .container {
     position: relative;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
 }
 .main-navigation {
     display: -webkit-box;
@@ -109,6 +139,9 @@ button[type="submit"] {
     height: 64px;
 }
 .main-menu {
+    position: absolute;
+    left: 192px;
+    top: 13px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -118,8 +151,8 @@ button[type="submit"] {
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     position: absolute;
-    left: 190px;
-    top: 13px;
+    left: 191px;
+    top: 14px;
     padding: 0;
     margin: 0;
     max-width: 500px;
@@ -131,19 +164,20 @@ button[type="submit"] {
 }
 .main-menu > li > a {
     display: block;
-    padding: 11px 14px;
-    line-height: 10px;
-    font-size: 16px;
-    border-radius: 16px;
+    margin-right: 3px;
+    padding: 6px 12px;
+    line-height: 18px;
+    border-radius: 18px;
     text-shadow: 0 0 5px #859e90;
 }
-.main-menu > li > a::after {
+.main-menu > li > a::after,
+.breadcrumbs > li > a::after {
     content: "";
     display: block;
     height: 1px;
     width: 100%;
-    -webkit-transform: translateY(4px);
-    transform: translateY(4px);
+    -webkit-transform: translateY(-1px);
+    transform: translateY(-1px);
     background-color: rgba(255, 255, 255, 0.2);
 }
 .main-menu > li:hover > a {
@@ -163,6 +197,7 @@ button[type="submit"] {
     text-shadow: none;
 }
 .main-menu .sub-menu {
+    z-index: 20;
     position: absolute;
     display: none;
     -webkit-transform: translate(-7px, 6px);
@@ -212,9 +247,6 @@ button[type="submit"] {
     transform: translate(-15px, 17px);
     background-color: #d1d0cc;
 }
-.popup-block {
-    display: none;
-}
 .user-header {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -224,7 +256,7 @@ button[type="submit"] {
     justify-content: flex-start;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
-    width: 262px;
+    max-width: 262px;
     margin-left: auto;
     padding-top: 24px;
     font-size: 14px;
@@ -241,9 +273,7 @@ button[type="submit"] {
     background: url("../img/sprite.svg") no-repeat;
 }
 .search-block {
-    display: -webkit-inline-box;
-    display: -ms-inline-flexbox;
-    display: inline-flex;
+    display: inline-block;
     position: relative;
     width: 32px;
     height: 32px;
@@ -259,9 +289,7 @@ button[type="submit"] {
 }
 .enter-block,
 .basket-block {
-    display: -webkit-inline-box;
-    display: -ms-inline-flexbox;
-    display: inline-flex;
+    display: inline-block;
     position: relative;
     margin-left: 10px;
     padding: 6px 0;
@@ -313,8 +341,8 @@ button[type="submit"] {
     display: none;
     position: absolute;
     padding: 19px 15px;
-    -webkit-transform: translate(-305px, -1px);
-    transform: translate(-305px, -1px);
+    -webkit-transform: translate(-308px, -1px);
+    transform: translate(-308px, -1px);
     border-radius: 5px;
     background-color: #f8f7f4;
     box-shadow: 0 20px 20px 3px rgba(0, 0, 0, 0.40);
@@ -338,8 +366,8 @@ button[type="submit"] {
     display: none;
     position: absolute;
     padding: 20px 18px;
-    -webkit-transform: translate(-173px, 3px);
-    transform: translate(-173px, 3px);
+    -webkit-transform: translate(-173px, 4px);
+    transform: translate(-173px, 4px);
     border-radius: 5px;
     background-color: #f8f7f4;
     box-shadow: 0 20px 20px 3px rgba(0, 0, 0, 0.40);
@@ -348,10 +376,10 @@ button[type="submit"] {
 .enter-field input[type="email"],
 .enter-field input[type="password"] {
     width: 214px;
-    padding: 10px 12px;
+    padding: 9px 12px;
 }
 .enter-field input[type="email"] {
-    margin-bottom: 19px;
+    margin-bottom: 24px;
 }
 .wrapper-enter {
     display: -webkit-box;
@@ -363,7 +391,8 @@ button[type="submit"] {
     -webkit-box-align: start;
     -ms-flex-align: start;
     align-items: flex-start;
-    margin-top: 18px;
+    margin-top: 20px;
+    padding-bottom: 2px;
 }
 .wrapper-enter button[type="submit"] {
     padding: 11px 26px;
@@ -591,9 +620,6 @@ main .container {
     position: relative;
     width: 267px;
 }
-
-/* спросить ховер у каталога*/
-
 .item-catalog::after {
     content: "";
     position: absolute;
@@ -661,8 +687,8 @@ main .container {
 .quick-view {
     display: none;
     position: absolute;
-    -webkit-transform: translate(32px, 333px);
-    transform: translate(32px, 333px);
+    top: 335px;
+    left: 33px;
     padding: 10px 18px;
     text-align: center;
     font-size: 18px;
@@ -673,10 +699,6 @@ main .container {
     border-radius: 100px;
     box-shadow: 0 1px 1px rgba(172, 16, 0, 0.64);
     z-index: 20;
-}
-.quick-view:first-child {
-    -webkit-transform: translate(31px, 10px);
-    transform: translate(31px, 10px);
 }
 .quick-view:hover {
     background: -webkit-linear-gradient(top, #f58669 0%, #ec6f5e 100%);
@@ -766,13 +788,9 @@ main .container {
 /* блог и форма подписки*/
 
 .new {
-    min-height: 220px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
     margin-bottom: 40px;
 }
 .blog {
@@ -797,6 +815,7 @@ main .container {
 .blog a {
     display: block;
     padding-right: 200px;
+    padding-bottom: 10px;
     font-size: 24px;
     line-height: 30px;
     color: #323232;
@@ -823,6 +842,7 @@ main .container {
     font-weight: 500;
     color: #323232;
     border-radius: 15px;
+    margin-left: auto;
 }
 .subscription p {
     margin: 0;
@@ -830,13 +850,12 @@ main .container {
     padding: 35px 26px;
 }
 .subscription form {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+    width: 560px;
 }
 .subscription input[type="email"] {
     width: 342px;
-    margin-left: 26px;
+    margin-left: 22px;
+    margin-bottom: 39px;
     padding: 10px;
     padding-left: 13px;
     font-size: inherit;
@@ -863,6 +882,7 @@ main .container {
 #yandex-map {
     position: absolute;
     top: 0px;
+    left: 0;
     width: 100%;
     min-height: 430px;
     z-index: 10;
@@ -908,9 +928,7 @@ main .container {
     font-weight: 700;
     color: #323232;
 }
-.address .feedback-btn {
-    display: inline-block;
-    vertical-align: top;
+.address .comment-btn {
     margin-top: 22px;
     margin-right: 25px;
     padding: 10px 23px;
@@ -919,8 +937,140 @@ main .container {
 
 /* для блока обратной связи*/
 
-.feedback-popup {
+@-webkit-keyframes bounce {
+  0%   {
+    -webkit-transform: translateY(-2000px);
+    transform: translateY(-2000px);
+  }
+  70%  {
+    -webkit-transform: translateY(30px);
+    transform: translateY(30px);
+  }
+  90%  {
+    -webkit-transform: translateY(-10px);
+    transform: translateY(-10px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounce {
+  0%   {
+    -webkit-transform: translateY(-2000px);
+    transform: translateY(-2000px);
+  }
+  70%  {
+    -webkit-transform: translateY(30px);
+    transform: translateY(30px);
+  }
+  90%  {
+    -webkit-transform: translateY(-10px);
+    transform: translateY(-10px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+.modal-feedback {
+    z-index: 23;
     display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+}
+.lining {
+    z-index: 25;
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+}
+.modal-content-show {
+    display: block;
+    background-color: rgba(80, 80, 80, 0.4);
+}
+.modal-content-bounce {
+    display: block;
+    -webkit-animation: bounce 0.6s;
+    animation: bounce 0.6s;
+}
+.modal-content-close {
+    position: absolute;
+    top: 13px;
+    right: 15px;
+    width: 22px;
+    height: 22px;
+    font-size: 0;
+    background-color: transparent;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+}
+.modal-content-close::before,
+.modal-content-close::after {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 2px;
+    width: 21px;
+    height: 2px;
+    background-color: #000000;
+}
+.modal-content-close::before {
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+.modal-content-close::after {
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+.modal-feedback .modal-field {
+    position: fixed;
+    padding: 16px 12px;
+    width: 478px;
+    top: 33%;
+    left: 50%;
+    margin-left: -238px;
+    border-radius: 10px;
+    background-color: #f8f7f4;
+    box-shadow: 0 20px 20px 3px rgba(0, 0, 0, 0.40);
+    z-index: 30;
+}
+.modal-field fieldset {
+    border: none;
+}
+.modal-field legend {
+    padding-bottom: 12px;
+    font-size: 24px;
+    line-height: 28px;
+    font-weight: 600;
+    color: #323232;
+}
+.modal-field input[type="text"],
+.modal-field input[type="email"],
+.modal-field textarea {
+    width: 236px;
+    font-size: 16px;
+    padding: 10px 13px;
+    margin-bottom: 19px;
+}
+.modal-field textarea {
+    width: 400px;
+    height: 135px;
+    padding-top: 7px;
+    margin-bottom: 19px;
+}
+.modal-field button[type="submit"] {
+    padding: 10px 25px;
+    margin-left: 290px;
 }
 
 /* для футера */
@@ -932,6 +1082,8 @@ main .container {
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
+    /* Только для оформления сетки */
+    outline: 3px solid coral;
 }
 .main-footer {
     padding: 20px 0;
@@ -965,9 +1117,8 @@ main .container {
     box-shadow: 0px 0px 0px 4px rgba(255, 255, 255, 0.5);
 }
 .social:active {
-    opacity:0.8;
-	box-shadow: inset 0px 2px 0 1px rgba(0,0,0,0.75),
-                         0px 0px 0px 3px rgba(255,255,255,0.3);
+    opacity: 0.8;
+    box-shadow: inset 0px 2px 0 1px rgba(0, 0, 0, 0.75), 0px 0px 0px 3px rgba(255, 255, 255, 0.3);
 }
 .social::before {
     content: "";
@@ -1080,7 +1231,7 @@ main .container {
     -webkit-box-pack: start;
     -ms-flex-pack: start;
     justify-content: flex-start;
-    width: 190px;
+    width: 189px;
 }
 .footer-copyright img {
     width: 108px;
@@ -1109,20 +1260,191 @@ main .container {
 
 /* КАТАЛОГ*/
 
+.popup {
+    display: none;
+}
 
 /* для шапки */
 
 .navigation {
-    width: 600px;
-    /* Только для оформления сетки */
-    min-height: 115px;
+    position: relative;
+}
+.catalog-logo {
+    position: absolute;
+    top: 9px;
+    left: 21px;
+}
+.catalog-logo img {
+    width: 154px;
+    height: 64px;
+}
+.main-menu .active {
+    padding: 6px 12px;
+    border-radius: 18px;
+    background-color: #d07058;
+}
+.main-menu .active:active {
+    box-shadow: inset 0 3px 2px -1px #333;
 }
 .breadcrumbs {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    list-style: none;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    position: absolute;
+    left: 27px;
+    top: 99px;
+    padding: 0;
     margin: 0;
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 500;
+    list-style: none;
+    z-index: 20;
+}
+.breadcrumbs a {
+    position: relative;
+    display: inline-block;
+    padding-right: 21px;
+}
+.breadcrumbs a::before {
+    position: absolute;
+    content: "»";
+    display: block;
+    bottom: 1px;
+    left: 60px;
+    color: #ffffff;
+    font-size: 14px;
+    line-height: 16px;
+    background-color: transparent;
+}
+.breadcrumbs a:hover {
+    text-decoration: underline;
+    color: #ffbc9e;
+}
+.full-basket-block {
+    display: inline-block;
+    position: relative;
+    width: 21px;
+    height: 20px;
+    margin-left: 7px;
+    padding: 6px 0;
+    padding-left: 45px;
+    padding-right: 53px;
+    vertical-align: middle;
+    color: #323232;
+    background-color: #ffffff;
+    border-radius: 25px;
+    white-space: nowrap;
+}
+.full-basket::after {
+    content: "";
+    position: absolute;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    background: url("../img/sprite.svg") no-repeat;
+}
+.full-basket::after {
+    width: 21px;
+    height: 20px;
+    top: 45%;
+    left: 23%;
+    background-position: -240px -65px;
+}
+.user-basket {
+    position: relative;
+}
+.order-basket {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    z-index: 22;
+}
+.user-basket .order-basket {
+    position: absolute;
+    width: 510px;
+    top: 40px;
+    right: 0;
+    -webkit-transform: translate(3px, -4px);
+    transform: translate(3px, -4px);
+    padding: 20px 15px;
+    font-size: 13px;
+    line-height: 16px;
+    color: #323232;
+    background-color: #f8f7f4;
+    border-radius: 2px;
+}
+.order-basket .close-one,
+.order-basket .close-two {
+    position: absolute;
+    top: 22px;
+    left: 13px;
+    width: 10px;
+    height: 10px;
+
+    font-size: 0;
+    background-color: transparent;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+}
+.order-basket .close-two {
+
+    top: 22px;
+    left: 13px;
+
+}
+.close-one::before,
+.close-one::after {
+    content: "";
+    position: absolute;
+    top: 12px;
+    left: 2px;
+    width: 13px;
+    height: 1px;
+    background-color: #323232;
+}
+.close-two::before,
+.close-two::after {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 2px;
+    width: 21px;
+    height: 1px;
+    background-color: #323232;
+}
+.close-one::before,
+.close-two::before {
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+.close-one::after,
+.close-two::after {
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+.order-basket img {
+    margin-left: 25px;
+    margin-right: 13px;
+}
+.order-basket .products-price {
+    padding-top: 7px;
+}
+.order-basket .weight-price {}
+.btn-order {
+    padding: 7px 15px;
+}
+.user-basket:hover .order-basket {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
 }
 .main-title {
     /* Только для оформления сетки */
@@ -1149,7 +1471,6 @@ main .container {
     height: 130px;
     margin-bottom: 40px;
     /* Только для оформления сетки */
-    /*Пока не знаю, что тут делать. Все равно все вываливается. Буду делать декоративный элементы, надеюсь, разберусь*/
     outline: 3px solid coral;
 }
 .filter input[type="submit"] {
