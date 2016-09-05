@@ -71,6 +71,7 @@
                     <div class="header-contacts">
                         <p>C 10 до 20, ежедневно </p>
                         <a href="tel:+78124502525">8  812 450-25-25</a>
+
                     </div>
 
                 </section>
@@ -118,13 +119,16 @@
                     <article class="item-catalog">
                         <div class="item-catalog-hit"></div>
                         <img src="img/orange.png" height="267" width="267" alt="Сливочное с апельсиновым джемом и циторусовой стружкой">
+
                         <p class="catalog-price"><span>310 &nbsp; </span>&#8202;/кг</p>
-                        <p class="catalog-name">Сливочное с апельсиновым джемом и циторусовой стружкой</p>
-                        <a class="quick-view" href="#">Быстрый просмотр</a>
+                        <p class="catalog-name">Сливочное с апельсиновым джемом и циторусовой стружкой
+
+                            <a class="quick-view" href="#">Быстрый просмотр</a>
                     </article>
                     <article class="item-catalog">
                         <div class="item-catalog-hit"></div>
                         <img src="img/coffee.png" height="267" width="267" alt="Сливочно-кофейное с кусочками шоколада">
+
                         <p class="catalog-price"><span>380 &nbsp; </span>&#8202;/кг</p>
                         <p class="catalog-name">Сливочно-кофейное с кусочками шоколада</p>
                         <a class="quick-view" href="#">Быстрый просмотр</a>
@@ -132,6 +136,7 @@
                     <article class="item-catalog">
                         <div class="item-catalog-hit"></div>
                         <img src="img/strawberry.png" height="267" width="267" alt="Сливочно-клубничное с присыпкой из белого шоколада">
+
                         <p class="catalog-price"><span>355 &nbsp; </span>&#8202;/кг</p>
                         <p class="catalog-name">Сливочно-клубничное с присыпкой из белого шоколада</p>
                         <a class="quick-view" href="#">Быстрый просмотр</a>
@@ -139,6 +144,7 @@
                     <article class="item-catalog">
                         <div class="item-catalog-hit"></div>
                         <img src="img/brulee.png" height="267" width="267" alt="Сливочное крем-брюле с карамельной подливкой">
+
                         <p class="catalog-price"><span>415 &nbsp; </span>&#8202;/кг</p>
                         <p class="catalog-name">Сливочное крем-брюле с карамельной подливкой</p>
                         <a class="quick-view" href="#">Быстрый просмотр</a>
@@ -177,17 +183,21 @@
             <section class="map">
                 <div class="container">
                     <div class="address">
-                        <p>Адрес главного офиса и<br>офлайн магазина:</p>
+                        <p>Адрес главного офиса и
+                            <br>офлайн магазина:</p>
+
                         <b>ул. Большая Конюшенная 19/8, Санкт-Петербург</b>
+
                         <p> Для заказов по телефону:
                             <br>
                             <a class="phone" href="+78124502525">8 812 450-25-25</a> (с 10 до 20 ежедневно)
                         </p>
-                        <a class="btn-orange feedback-btn" href="#">Форма обратной связи</a>
+                        <a class="btn-orange comment-btn" href="#">Форма обратной связи</a>
                     </div>
                 </div>
                 <div id="yandex-map"></div>
             </section>
+
         </main>
 
         <footer class="main-footer">
@@ -201,9 +211,11 @@
 
                 <section class="footer-business-info">
                     <p class="heart-block heart"></p>
-                    <p class="business-info"><a class="bolder" href="#"> Для поставщиков</a><a href="#">О производстве</a>
+                    <p class="business-info"><a class="bolder" href="#"> Для поставщиков</a>
+                        <a href="#">О производстве</a>
                     </p>
-                    <p><a class="average-underline" href="#">Наши документы</a><a href="#">Экологические стандарты</a>
+                    <p><a class="average-underline" href="#">Наши документы</a>
+                        <a href="#">Экологические стандарты</a>
                     </p>
                 </section>
 
@@ -213,21 +225,45 @@
                 </section>
             </div>
         </footer>
-
-        <!--модальное окно для формы обратной связи-->
-        <div class="feedback-popup">
-            <form class="modal field" action="/echo" method="post">
-                <fieldset>
-                    <legend>Мы обязательно вам ответим!</legend>
-                    <input type="text" name="name" placeholder="Как Вас зовут?" required>
-                    <input type="email" name="email" placeholder="Ваша почта для ответа?" required>
-                    <textarea name="comment" rows="6" placeholder="Напишите что-нибудь..."></textarea>
-                    <input class="btn" type="submit" value="Отправить">
-                </fieldset>
-            </form>
-        </div>
+        
+<!--модальное окно для формы обратной связи-->
+    <div class="modal-feedback">
+        <form class="modal-field" action="/echo" method="post">
+            <button class="modal-content-close" type="button" title="Закрыть">Закрыть</button>
+            <fieldset>
+                <legend>Мы обязательно вам ответим!</legend>
+                <label class="hidden-signature" for="your-name">Как вас зовут?</label>
+                <input type="text" id="your-name" name="name" placeholder="Как вас зовут?" required>
+                <label class="hidden-signature" for="your-mail">Ваша почта для ответа?</label>
+                <input type="email" id="your-mail" name="email" placeholder="Ваша почта для ответа?" required>
+                <label class="hidden-signature" for="write-us">Напишите что-нибудь...</label>
+                <textarea id="write-us" name="comment" placeholder="Напишите что-нибудь..." required></textarea>
+                <button class="btn-orange" type="submit">Отправить</button>
+            </fieldset>
+        </form>
+        <div class="lining"></div>
     </div>
-    <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=ApfUcWZmXE0JUrGmZI_2bfdY8ZtD5jFl&amp;width=100%&amp;height=430&amp;lang=ru_RU&amp;sourceType=constructor&amp;scroll=true&id=yandex-map"></script>
+
+      <!--модальное окно для формы обратной связи-->
+    <div class="modal-feedback">
+        <form class="modal-field" action="/echo" method="post">
+            <button class="modal-content-close" type="button" title="Закрыть">Закрыть</button>
+            <fieldset>
+                <legend>Мы обязательно вам ответим!</legend>
+                <label class="hidden-signature" for="your-name">Как вас зовут?</label>
+                <input type="text" id="your-name" name="name" placeholder="Как вас зовут?" required>
+                <label class="hidden-signature" for="your-mail">Ваша почта для ответа?</label>
+                <input type="email" id="your-mail" name="email" placeholder="Ваша почта для ответа?" required>
+                <label class="hidden-signature" for="write-us">Напишите что-нибудь...</label>
+                <textarea id="write-us" name="comment" placeholder="Напишите что-нибудь..." required></textarea>
+                <button class="btn-orange" type="submit">Отправить</button>
+            </fieldset>
+        </form>
+        <div class="lining"></div>
+    </div>
+    <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=ApfUcWZmXE0JUrGmZI_2bfdY8ZtD5jFl&amp;width=100%&amp;height=430&amp;lang=ru_RU&amp;sourceType=constructor&amp;scroll=true&id=yandex-map">
+    </script>
+    <script src="js/modal.js"></script>
 </body>
 
 </html>
