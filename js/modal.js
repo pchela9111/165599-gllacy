@@ -46,13 +46,9 @@ link.addEventListener("click", function(event) {
 });
 
 
-close.addEventListener("click", function(event) {
-  exit(event);
-});
+close.addEventListener("click", exit, true);
+lining.addEventListener("click", exit, true);
 
-lining.addEventListener("click", function(event) {
-  exit(event);
-});
 
 form.addEventListener("submit", function(event) {
   if (!yourName.value || !yourEmail.value || !yourComment.value) {
