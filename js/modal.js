@@ -29,28 +29,14 @@ link.addEventListener("click", function(event) {
     yourName.value = storageName;
     yourEmail.value = srorageEmail;
     yourComment.focus();
-
-    // взамен закомментированному коду, почему-то не рабочему
   } else {
     yourName.focus();
-  }
+  };
 
-  // } else {
-  //   if (storageName) {
-  //     yourName.value = storageName;
-  //     yourEmail.focus();
-  //   } else {
-  //     if (storageEmail) {
-  //       yourEmail.value = storageEmail;
-  //       yourName.focus();
-  //     }
-  //   }
-  // };
-
-  // Дрожание модального окна при попытке отправки незаполненной формы
+  // Дрожание модального окна при попытке отправки незаполненной формы и запись значений в localStorage валидных имени и почты
   form.addEventListener("submit", function(event) {
+    event.preventDefault();
     if (!yourName.value || !yourEmail.value || !yourComment.value) {
-      event.preventDefault();
       form.classList.remove("modal-error");
       form.offsetWidth = form.offsetWidth;
       form.classList.add("modal-error");
