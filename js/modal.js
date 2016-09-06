@@ -86,3 +86,19 @@ for (i = 0; i < label.length; i++) {
     }
   })
 };
+
+// Настройка карты
+function initMap() {
+  var mapDiv = document.getElementById('yandex-map');
+  var myLatLng = {lat: 59.938810, lng: 30.323400};
+  var map = new google.maps.Map(mapDiv, {
+    center: myLatLng,
+    zoom: 15
+  });
+  var image = "img/icon-marker.png";
+  var marker = new google.maps.Marker({
+    position: myLatLng,
+    map: map,
+    icon: image
+  });
+}
