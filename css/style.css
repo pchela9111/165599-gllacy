@@ -227,6 +227,7 @@ label {
     background-color: #d07058;
     text-shadow: none;
 }
+
 .main-menu .sub-menu {
     position: absolute;
     display: none;
@@ -1132,11 +1133,9 @@ main .container {
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
-    
 }
 .main-footer {
     padding: 20px 0;
-    
 }
 .main-footer a:hover {
     text-decoration: underline;
@@ -1355,7 +1354,6 @@ main .container {
     line-height: 16px;
     font-weight: 500;
     list-style: none;
-    
 }
 .breadcrumbs a {
     position: relative;
@@ -1783,7 +1781,6 @@ input[type="checkbox"] + label:hover:before {
     position: relative;
     white-space: nowrap;
     margin-right: 24px;
-    
     text-align: right;
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
     padding-bottom: 30px;
