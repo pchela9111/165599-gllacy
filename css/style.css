@@ -242,7 +242,6 @@ form label {
     background-color: #d07058;
     text-shadow: none;
 }
-
 .main-menu .sub-menu {
     position: absolute;
     display: none;
@@ -871,7 +870,6 @@ main .container {
     text-decoration: underline;
 }
 .blog a:hover {
-    font-weight: 500;
     color: #e84d37;
 }
 .blog a:active {
@@ -1349,7 +1347,7 @@ main .container {
     box-shadow: inset 0 3px 2px -1px #333;
 }
 .breadcrumbs-menu {
-    z-index: 19;
+    z-index: 9;
 }
 .breadcrumbs {
     display: -webkit-box;
@@ -1543,7 +1541,6 @@ main .container {
     display: -ms-flexbox;
     display: flex;
 }
-.main-title {}
 .main-title h1 {
     margin: 0;
     padding: 0;
@@ -1552,6 +1549,9 @@ main .container {
     margin-top: 3px;
     margin-bottom: 25px;
 }
+
+/*фильтр*/
+
 .filter form {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1582,53 +1582,68 @@ main .container {
 .filter-item {
     position: relative;
     padding: 8px 14px;
-    padding-right: 33px;
+    padding-right: 0;
     color: #ffffff;
+    border-radius: 60px;
     border: none;
     outline: none;
-}
-.filter-item:hover {
-    color: #000000;
-    background-color: #ffffff;
 }
 option {
     color: #000000;
 }
 select {
-    /*как убрать кнопку в select */
+    /*как убрать кнопку в select 
     -webkit-appearance: none;
     -moz-appearance: none;
-    appearance: none;
+    appearance: none;*/
 }
-.arrow {
+select {
+    padding-left: 0;
+}
+.filter-item:hover {
+    color: #000000;
+    background-color: #ffffff;*/
+}
+
+
+/*.arrow {
     position: absolute;
-    width: 4px;
-    height: 4px;
+    width: 8px;
+    height: 5px;
     -webkit-transform: translate(166px, 15px);
     transform: translate(166px, 15px);
+    background-color: transparent;
 }
-[class^="arrow"] {
-    display: inline-block;
-    width: 0;
-    height: 0;
-}
-.arrow-bottom {
-    border: 4px solid transparent;
-    border-top-color: #ffffff;
-    border-bottom-width: 0;
-}
-.arrow-left {
-    border: 4px solid transparent;
-}
-.arrow-bottom::before,
-.arrow-left::before {
+.arrow-black::after {
     position: absolute;
     content: "";
-    width: 4px;
-    height: 4px;
-    top: 27px;
-    left: 37px;
+    top: 3px;
+    left: 5px;
+    width: 8px;
+    height: 5px;
+    background-color: transparent;
+    background: url("../img/sprite.svg") no-repeat;
+    transform: translate(-50%, -50%);
+    background-position: -297px -83px;
+    z-index: 19;
 }
+.arrow-black:hover::before {
+    background-position: -297px -83px;
+    z-index: 30;
+}
+.arrow-white::after {
+    position: absolute;
+    content: "";
+    top: 3px;
+    left: 5px;
+    width: 8px;
+    height: 5px;
+    background-color: transparent;
+    background: url("../img/sprite.svg") no-repeat;
+    transform: translate(-50%, -50%);
+    background-position: -297px -67px;
+    z-index: 22;
+}*/
 .range-controls {
     position: relative;
     width: 218px;
@@ -1750,12 +1765,14 @@ input[type="checkbox"] + label:before {
     border: 1px solid #ffffff;
     background-color: transparent;
     border-radius: 3px;
+    cursor: pointer;
 }
 input[type="checkbox"]:checked + label:before {
     content: "✓";
     color: #ffffff;
     display: inline-block;
     vertical-align: middle;
+    cursor: pointer;
 }
 input[type="checkbox"] + label:hover:before {
     box-shadow: inset 0 0 1px 1px #ffffff;
