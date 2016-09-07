@@ -1334,18 +1334,17 @@ main .container {
 
 
 /* для шапки */
+
 .background-catalog::after {
     position: absolute;
     content: "";
-    top:0;
+    top: 0;
     left: 0;
     width: 100%;
     height: 656px;
-    
-    
     background-image: linear-gradient(rgba(255, 255, 255, 0.2), transparent);
     z-index: -1;
-} 
+}
 .navigation {
     position: relative;
 }
@@ -1389,7 +1388,6 @@ main .container {
     font-weight: 500;
     list-style: none;
 }
-
 .breadcrumbs a {
     position: relative;
     display: inline-block;
@@ -1605,68 +1603,31 @@ breadcrumbs a {}
     margin-right: 15px;
 }
 .filter-item {
-    position: relative;
+    padding: 0;
+    margin: 0;
     padding: 8px 14px;
-    padding-right: 33px;
+    
     color: #ffffff;
     border-radius: 60px;
     border: none;
     outline: none;
+    cursor: pointer;
+}
+select {
+    padding: 0;
+    margin: 0;
+    
 }
 option {
     color: #000000;
 }
-select {
-    /*как убрать кнопку в select 
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;*/
-}
-select {}
+
 .filter-item:hover {
     color: #000000;
     background-color: #ffffff;
-    */
 }
 
-/*.arrow {
-    position: absolute;
-    width: 8px;
-    height: 5px;
-    -webkit-transform: translate(166px, 15px);
-    transform: translate(166px, 15px);
-    background-color: transparent;
-}
-.arrow-black::after {
-    position: absolute;
-    content: "";
-    top: 3px;
-    left: 5px;
-    width: 8px;
-    height: 5px;
-    background-color: transparent;
-    background: url("../img/sprite.svg") no-repeat;
-    transform: translate(-50%, -50%);
-    background-position: -297px -83px;
-    z-index: 19;
-}
-.arrow-black:hover::before {
-    background-position: -297px -83px;
-    z-index: 30;
-}
-.arrow-white::after {
-    position: absolute;
-    content: "";
-    top: 3px;
-    left: 5px;
-    width: 8px;
-    height: 5px;
-    background-color: transparent;
-    background: url("../img/sprite.svg") no-repeat;
-    transform: translate(-50%, -50%);
-    background-position: -297px -67px;
-    z-index: 22;
-}*/
+
 
 .range-controls {
     position: relative;
