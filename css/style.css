@@ -1582,7 +1582,7 @@ main .container {
 .filter-item {
     position: relative;
     padding: 8px 14px;
-    padding-right: 0;
+    padding-right: 33px;
     color: #ffffff;
     border-radius: 60px;
     border: none;
@@ -1598,7 +1598,7 @@ select {
     appearance: none;*/
 }
 select {
-    padding-left: 0;
+    
 }
 .filter-item:hover {
     color: #000000;
