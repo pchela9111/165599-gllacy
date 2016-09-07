@@ -664,6 +664,9 @@ main .container {
     position: relative;
     width: 267px;
 }
+.item-catalog:hover .catalog-name {
+    border-bottom: none;
+}
 .item-catalog::after {
     content: "";
     position: absolute;
@@ -716,6 +719,7 @@ main .container {
     margin-top: 15px;
     font-weight: 400;
     border-bottom: 1px solid rgba(255, 255, 255, .2);
+    
 }
 .catalog-name:hover {
     border-bottom: none;
