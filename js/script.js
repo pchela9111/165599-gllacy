@@ -2,7 +2,7 @@
 var label = document.querySelectorAll(".hidden-signature"),
     input = document.querySelectorAll("[placeholder]");
 
-for (i = 0; i < label.length; i++) {
+for (var i = 0; i < label.length; i++) {
   if (input[i].hasAttribute("required")) {
     input[i].removeAttribute("required");
   };
@@ -90,7 +90,7 @@ link.addEventListener("click", function(event) {
 
 // Настройка карты
 function initMap() {
-  var mapDiv = document.getElementById('yandex-map');
+  var mapDiv = document.getElementById('map');
   var myLatLng = {lat: 59.938810, lng: 30.323400};
   var map = new google.maps.Map(mapDiv, {
     center: myLatLng,

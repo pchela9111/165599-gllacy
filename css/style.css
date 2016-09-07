@@ -16,7 +16,6 @@ body {
 a {
     text-decoration: none;
     color: #ffffff;
-    cursor: pointer;
 }
 img {
     max-width: 100%;
@@ -68,7 +67,6 @@ button[type="submit"] {
     color: #ffffff;
     border: none;
     outline: none;
-    cursor: pointer;
 }
 .btn-orange {
     display: -webkit-inline-box;
@@ -167,14 +165,9 @@ form label {
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
+    align-items: flex-start;
 }
 .main-navigation {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: start;
-    -ms-flex-pack: start;
-    justify-content: flex-start;
     min-width: 600px;
     min-height: 64px;
     display: block;
@@ -216,7 +209,7 @@ form label {
     border-radius: 18px;
     text-shadow: 0 0 5px #859e90;
 }
-.main-menu > li > a::after {
+.main-menu > li > a[href]::after {
     content: "";
     display: block;
     height: 1px;
@@ -230,7 +223,7 @@ form label {
     background-color: #ffffff;
     text-shadow: none;
 }
-.main-menu > li > a:active {
+.main-menu > li > a[href]:active {
     color: #000;
     background-color: #ffffff;
     box-shadow: inset 0 3px 2px -1px #333;
@@ -556,7 +549,6 @@ main .container {
     background-color: transparent;
     border: 2px solid #ffffff;
     border-radius: 50%;
-    cursor: pointer;
 }
 #btn-1:checked ~ .site-wrapper #slide1,
 #btn-2:checked ~ .site-wrapper #slide2,
@@ -933,11 +925,12 @@ main .container {
     display: flex;
     min-height: 430px;
 }
-#yandex-map {
+#map {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
+    height: 100%;
     min-height: 430px;
     z-index: 10;
 }
@@ -1086,7 +1079,6 @@ main .container {
     background-color: transparent;
     border: 0;
     outline: 0;
-    cursor: pointer;
 }
 .modal-content-close::before,
 .modal-content-close::after {
@@ -1357,18 +1349,6 @@ main .container {
     width: 154px;
     height: 64px;
 }
-.main-menu .active {
-    padding: 6px 12px;
-    border-radius: 18px;
-    background-color: #d07058;
-    text-shadow: none;
-}
-.main-menu .active:active {
-    box-shadow: inset 0 3px 2px -1px #333;
-}
-.breadcrumbs-menu {
-    z-index: 42;
-}
 .breadcrumbs {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1489,7 +1469,6 @@ breadcrumbs a {}
     background-color: transparent;
     border: 0;
     outline: 0;
-    cursor: pointer;
 }
 .basket-suggestions .close-two {
     top: 76px;
@@ -1600,56 +1579,35 @@ breadcrumbs a {}
     border-radius: 80px;
 }
 .filter-item-select {
-    position: relative;
-    width: 193px;
-    margin-right: 20px;
+    margin-right: 15px;
 }
 .filter-item {
-    position: relative;
-    padding: 9px 14px;
-    padding-right: 17px;
+    padding: 0;
+    margin: 0;
+    padding: 8px 14px;
+
     color: #ffffff;
     border-radius: 60px;
     border: none;
     outline: none;
-    width: 100%;
-    ;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
+    cursor: pointer;
 }
-.arrow {
-    position: absolute;
-    right: 13px;
-    bottom: 30px;
-}
-.arrow-white {
-    width: 0;
-    height: 0;
-    border-left: 5px solid transparent;
-    border-right: 5px solid transparent;
-    border-top: 5px solid white;
-}
-.arrow-black {
-    width: 0;
-    height: 0;
-    border-left: 5px solid transparent;
-    border-right: 5px solid transparent;
-    border-top: 5px solid black;
-    z-index: 1;
-    display: none;
+select {
+    padding: 0;
+    margin: 0;
+
 }
 option {
     color: #000000;
 }
-.filter-item:hover,
-.filter-item:active {
+
+.filter-item:hover {
     color: #000000;
     background-color: #ffffff;
 }
-.filter-item:hover ~ .arrow-black {
-    display: block;
-}
+
+
+
 .range-controls {
     position: relative;
     width: 218px;
@@ -1741,13 +1699,14 @@ input[type="radio"] + label:before {
     border: 1px solid #ffffff;
     background-color: transparent;
     border-radius: 50%;
-    cursor: pointer;
+    cursor: default;
 }
 input[type="radio"]:checked + label:before {
     content: "•";
     color: #ffffff;
     display: inline-block;
     vertical-align: middle;
+    cursor: default;
 }
 input[type="radio"] + label:hover:before {
     box-shadow: inset 0 0 1px 1px #ffffff;
@@ -1771,14 +1730,14 @@ input[type="checkbox"] + label:before {
     border: 1px solid #ffffff;
     background-color: transparent;
     border-radius: 3px;
-    cursor: pointer;
+    cursor: default;
 }
 input[type="checkbox"]:checked + label:before {
     content: "✓";
     color: #ffffff;
     display: inline-block;
     vertical-align: middle;
-    cursor: pointer;
+    cursor: default;
 }
 input[type="checkbox"] + label:hover:before {
     box-shadow: inset 0 0 1px 1px #ffffff;
@@ -1795,7 +1754,6 @@ input[type="checkbox"] + label:hover:before {
     line-height: 18px;
     outline: none;
     border: 2px solid #ffffff;
-    cursor: pointer;
 }
 .filter input[type="submit"]:hover {
     color: #000;
