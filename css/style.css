@@ -916,7 +916,8 @@ main .container {
     border-radius: 2px;
 }
 .subscription button[type="submit"] {
-   
+   display:inline-block;
+	vertical-align:top;
     padding: 0 19px;
     height: 43px;
     margin-left: 12px;
