@@ -610,10 +610,10 @@ main .container {
     border-radius: 15px;
 }
 .promo-raspberry {
-    background-image: url("../img/berry-bg.jpg");
+    background-image: #af2845 url("../img/berry-bg.jpg");
 }
 .promo-chocolate {
-    background-image: url("../img/choko-bg.jpg");
+    background-image: #6f4b3b url("../img/choko-bg.jpg");
 }
 .promo-title {
     padding: 0;
