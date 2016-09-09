@@ -935,7 +935,7 @@ main .container {
     display: flex;
     min-height: 430px;
 }
-#map {
+.google-maps {
     position: absolute;
     top: 0;
     left: 0;
