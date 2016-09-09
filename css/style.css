@@ -1590,8 +1590,13 @@ main .container {
   padding-bottom: 40px;
 }
 .filter form {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     width: 858px;
 }
@@ -1810,6 +1815,7 @@ input[type="checkbox"]:checked + label::after {
     height: 8px;
     border-left: 3px solid #ffffff;
     border-bottom: 3px solid #ffffff;
+    -webkit-transform: rotate(-45deg);
     transform: rotate(-45deg);
     box-sizing: border-box;
 }
