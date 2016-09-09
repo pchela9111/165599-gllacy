@@ -916,8 +916,8 @@ main .container {
     border-radius: 2px;
 }
 .subscription button[type="submit"] {
-   display:inline-block;
-	vertical-align:top;
+    display: inline-block;
+    vertical-align: top;
     padding: 0 19px;
     height: 43px;
     margin-left: 12px;
@@ -1609,6 +1609,12 @@ main .container {
     overflow: hidden;
     -webkit-appearance: none;
     -moz-appearance: none;
+}
+.filter-item::-ms-expand {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: transparent;
 }
 .arrow {
     position: absolute;
