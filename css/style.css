@@ -666,7 +666,7 @@ main .container {
     position: relative;
     width: 267px;
 }
-.item-catalog:hover .catalog-name {
+.item-catalog:hover .translucent-underline {
     border-bottom: none;
 }
 .item-catalog::after {
@@ -717,19 +717,14 @@ main .container {
     background-position: -255px -5px;
 }
 .catalog-name {
-    display: inline;
-    margin-top: 15px;
-    font-weight: 400;
-    border-bottom: 1px solid rgba(255, 255, 255, .2);
-}
-.catalog-name:hover {
-    border-bottom: none;
-}
-.translucent-underline {
-    display: block;
     width: 260px;
     margin: 10px auto;
+    margin-top: 8px;
     text-align: center;
+    font-weight: 400;
+}
+.translucent-underline {
+    border-bottom: 1px solid rgba(255, 255, 255, .2);
 }
 .item-catalog:hover::before {
     content: "";
@@ -784,7 +779,7 @@ main .container {
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
-    margin-top: 27px;
+    margin-top: 29px;
     margin-bottom: 41px;
     padding: 0 20px;
     padding-top: 25px;
@@ -1012,7 +1007,6 @@ main .container {
         transform: translateY(0);
     }
 }
-
 @keyframes bounce {
     0% {
         -webkit-transform: translateY(-2000px);
@@ -1219,9 +1213,7 @@ main .container {
 }
 .social:active {
     opacity: 0.9;
-    box-shadow:
-        0 0 0 5px rgba(255, 255, 255, 0.5),
-        inset 0px 2px 2px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.5), inset 0px 2px 2px 0px rgba(0, 0, 0, 0.75);
 }
 .social-btn-tw {
     background-position: -2px -62px;
@@ -1335,6 +1327,7 @@ main .container {
 }
 
 /* КАТАЛОГ*/
+
 
 /* для шапки */
 
@@ -1610,7 +1603,8 @@ main .container {
     border-radius: 60px;
     border: none;
     outline: none;
-    width: 100%;;
+    width: 100%;
+    ;
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
@@ -1636,19 +1630,17 @@ main .container {
     z-index: 1;
     display: none;
 }
-
 option {
     color: #000000;
 }
-.filter-item:hover, .filter-item:active {
+.filter-item:hover,
+.filter-item:active {
     color: #000000;
     background-color: #ffffff;
 }
 .filter-item:hover ~ .arrow-black {
     display: block;
 }
-
-
 .range-controls {
     position: relative;
     width: 218px;
@@ -1806,10 +1798,10 @@ input[type="checkbox"] + label:hover::before {
     box-shadow: inset 0 3px 2px -1px #333333;
 }
 .catalog-inner {
-    margin-bottom: 45px;
+    margin-bottom: 40px;
 }
 .inner-item {
-    margin-bottom: 27px;
+    margin-bottom: 29px;
 }
 .paginator {
     display: -webkit-box;
