@@ -90,7 +90,7 @@ link.addEventListener("click", function(event) {
 
 // Настройка карты
 function initMap() {
-  var mapDiv = document.getElementById('map');
+  var mapDiv = document.querySelector('.google-maps');
   var myLatLng = {lat: 59.938810, lng: 30.323400};
   var map = new google.maps.Map(mapDiv, {
     center: myLatLng,
