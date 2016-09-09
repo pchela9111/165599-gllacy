@@ -593,7 +593,7 @@ main .container {
     -ms-flex-pack: justify;
     justify-content: space-between;
     /* Только для оформления сетки */
-    height: 229px;
+   
     margin-bottom: 40px;
 }
 .promo-raspberry,
@@ -605,6 +605,8 @@ main .container {
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
+	
+	
     width: 560px;
     background-repeat: no-repeat;
     background-position: center;
@@ -630,16 +632,20 @@ main .container {
     margin: 0;
     font-size: 18px;
     padding: 15px 19px;
-    margin-bottom: 29px;
+	margin-bottom:29px;
+    
 }
 .promo-btn {
-    margin-left: auto;
+	align-self:flex-end;
+	padding: 0;
+    margin: 0;
+   
     margin-right: 21px;
     padding: 10px 23px;
+	
+	
 }
-.promo-chocolate .promo-btn {
-    margin-right: 19px;
-}
+
 
 /* для каталог-главная и каталога */
 
@@ -916,9 +922,11 @@ main .container {
     border-radius: 2px;
 }
 .subscription button[type="submit"] {
+	
     padding: 0 19px;
     height: 43px;
     margin-left: 12px;
+	
 }
 
 /* карта*/
@@ -1595,6 +1603,9 @@ main .container {
     width: 193px;
     margin-right: 20px;
 }
+ 
+ 
+ 
 .filter-item {
     position: relative;
     padding: 9px 14px;
@@ -1604,11 +1615,15 @@ main .container {
     border: none;
     outline: none;
     width: 100%;
-    ;
+    overflow: hidden;
     -webkit-appearance: none;
     -moz-appearance: none;
-    appearance: none;
+	
 }
+
+
+   
+
 .arrow {
     position: absolute;
     right: 13px;
