@@ -593,7 +593,6 @@ main .container {
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
-    /* Только для оформления сетки */
     margin-bottom: 40px;
 }
 .promo-raspberry,
@@ -606,7 +605,6 @@ main .container {
     -ms-flex-direction: column;
     flex-direction: column;
     width: 560px;
-    max-height: 225px;
     background-repeat: no-repeat;
     background-position: center;
     border-radius: 15px;
@@ -657,7 +655,6 @@ main .container {
     justify-content: space-between;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
-    /*margin-bottom: 32px;*/
 }
 .item-catalog {
     display: -webkit-box;
@@ -724,7 +721,6 @@ main .container {
 .catalog-name {
     display: block;
     width: 260px;
-     max-height: 40px;
     margin: 10px auto;
     margin-top: 8px;
     text-align: center;
@@ -736,10 +732,9 @@ main .container {
 .item-catalog:hover::before {
     content: "";
     position: absolute;
-    
     width: 287px;
-    height: calc(100% + 66px); 
-    
+    min-height: 400px;
+    height: calc(100% + 66px);
     -webkit-transform: translate(-10px, -10px);
     transform: translate(-10px, -10px);
     background-color: rgba(255, 255, 255, 0.3);
@@ -1580,7 +1575,7 @@ main .container {
 /*фильтр*/
 
 .filter {
-  padding-bottom: 40px;
+    padding-bottom: 40px;
 }
 .filter form {
     display: -webkit-box;
@@ -1594,7 +1589,7 @@ main .container {
     width: 858px;
 }
 .filter label {
-  cursor: pointer;
+    cursor: pointer;
 }
 .filter-title {
     padding: 0;
@@ -1714,8 +1709,7 @@ option {
 .max-toggle::before {
     left: 131px;
 }
-.filter-item-radio {
-}
+.filter-item-radio {}
 .filter-title {
     font-size: 14px;
     line-height: 16px;
@@ -1839,12 +1833,12 @@ input[type="checkbox"] + label:hover::before {
 input[disabled] + label,
 input[disabled] + label::before,
 input[disabled] + label::after {
-  opacity: 0.5;
-  cursor: auto;
+    opacity: 0.5;
+    cursor: auto;
 }
 input[type="checkbox"][disabled] + label:hover::before,
 input[type="radio"][disabled] + label:hover::before {
-  border-width: 1px;
+    border-width: 1px;
 }
 .catalog-inner {
     margin-bottom: 40px;
