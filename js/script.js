@@ -38,8 +38,8 @@ var link = document.querySelector(".comment-btn"),
     yourName = popup.querySelector("[name=name]"),
     yourEmail = popup.querySelector("[name=email]"),
     yourComment = popup.querySelector("[name=comment]"),
-    storageName = localStorage.getItem("yourName"),
-    srorageEmail = localStorage.getItem("yourEmail");
+    storageName = localStorage ? localStorage.getItem("yourName") : "",
+    srorageEmail = localStorage ? localStorage.getItem("yourEmail") : "";
 
 // Функция сброса классов (для закрытия модального окна)
 var exit = function(event) {
@@ -70,7 +70,7 @@ link.addEventListener("click", function(event) {
       form.classList.remove("modal-error");
       form.offsetWidth = form.offsetWidth;
       form.classList.add("modal-error");
-    } else {
+    } else if (localStorage) {
       localStorage.setItem("yourName", yourName.value);
       localStorage.setItem("yourEmail", yourEmail.value);
     }
