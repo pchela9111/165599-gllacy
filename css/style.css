@@ -1883,11 +1883,12 @@ input[type="radio"][disabled] + label:hover::before {
     -webkit-box-flex: 0;
     -ms-flex: 0 1 auto;
     flex: 0 1 auto;
+    display: block;
     margin: 1px;
-    padding: 5px 9px;
+    padding: 0px 9px;
+    min-width: 27px;
     height: 27px;
-    vertical-align: middle;
-    line-height: 13px;
+    line-height: 27px;
     font-weight: 500;
     border-radius: 100px;
     box-sizing: border-box;
@@ -1901,13 +1902,13 @@ input[type="radio"][disabled] + label:hover::before {
     height: 27px;
     font-size: 0;
     margin: 1px 2px;
-    background-color: rgba(255, 255, 255, 0.3);
-    background: url("../img/sprite.svg") no-repeat;
-    background-position: -248px -38px;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+.prev {
+    background: url("../img/prev.svg") no-repeat;
 }
 .next {
-    -webkit-transform: rotate(180deg);
-    transform: rotate(180deg);
+    background: url("../img/next.svg") no-repeat;
 }
 .disabled {
     opacity: 0.2;
