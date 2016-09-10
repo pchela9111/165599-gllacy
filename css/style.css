@@ -905,6 +905,7 @@ main .container {
     color: #e84d37;
 }
 .subscription {
+    position: relative;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -918,6 +919,15 @@ main .container {
     color: #323232;
     border-radius: 15px;
     margin-left: auto;
+}
+.subscription::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 6px solid transparent;
+    background-color:
 }
 .subscription p {
     margin: 0;
