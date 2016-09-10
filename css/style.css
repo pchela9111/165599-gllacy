@@ -9,6 +9,8 @@ body {
     font-weight: 700;
     color: #ffffff;
     background-color: #849d8f;
+}
+.background-gradient {
     background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.2) 0px, transparent 656px);
     background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.2) 0px, transparent 656px);
 }
@@ -170,7 +172,6 @@ form label {
 /* для шапки */
 
 .main-header .container {
-    position: relative;
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
@@ -180,15 +181,25 @@ form label {
     align-items: flex-start;
 }
 .main-navigation {
-    min-width: 600px;
-    min-height: 64px;
-    display: block;
-    z-index: 10;
+    max-width: calc(100% - 262px);
+    min-height: 114px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -ms-flex-line-pack: justify;
+    align-content: space-between;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
 }
-.index-logo {
-    position: absolute;
-    top: 10px;
-    left: 21px;
+.logo {
+    display: block;
+    padding-top: 9px;
+    margin-left: -6px;
+}
+.logo img {
     width: 154px;
     height: 64px;
 }
@@ -201,13 +212,12 @@ form label {
     justify-content: flex-start;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
-    position: absolute;
-    left: 191px;
-    top: 14px;
-    padding: 0;
+    max-width: calc(100% - 190px);
+    min-width: 400px;
+    padding: 14px 17px;
     margin: 0;
-    max-width: 500px;
     list-style: none;
+    z-index: 10;
 }
 .main-menu > li {
     padding: 10px 0;
@@ -215,8 +225,8 @@ form label {
 }
 .main-menu > li > a {
     display: block;
-    margin-right: 3px;
-    padding: 6px 12px;
+    margin-right: 2px;
+    padding: 6px 13px;
     line-height: 18px;
     border-radius: 18px;
     text-shadow: 0 0 5px #859e90;
@@ -561,6 +571,13 @@ main .container {
     background-color: transparent;
     border: 2px solid #ffffff;
     border-radius: 50%;
+    cursor: pointer;
+}
+.slider-controls label:hover {
+  background-color: #b2c1b7;
+}
+.slider-controls label:active {
+  background-color: #ffffff;
 }
 #btn-1:checked ~ .site-wrapper #slide1,
 #btn-2:checked ~ .site-wrapper #slide2,
@@ -1340,18 +1357,6 @@ main .container {
 
 /* для шапки */
 
-.navigation {
-    position: relative;
-}
-.catalog-logo {
-    position: absolute;
-    top: 9px;
-    left: 21px;
-}
-.catalog-logo img {
-    width: 154px;
-    height: 64px;
-}
 .breadcrumbs {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1361,20 +1366,18 @@ main .container {
     justify-content: flex-start;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
-    position: absolute;
-    left: 27px;
-    top: 99px;
     padding: 0;
     margin: 0;
+    width: 100%;
     font-size: 14px;
     line-height: 16px;
-    font-weight: 500;
     list-style: none;
 }
 .breadcrumbs a {
     position: relative;
-    display: inline-block;
+    display: block;
     margin-right: 21px;
+    font-weight: normal;
 }
 .breadcrumbs a[href]::after {
     content: "";
@@ -1389,11 +1392,12 @@ main .container {
     content: "»";
     display: block;
     bottom: 1px;
-    left: 60px;
+    right: -14px;
     color: #ffffff;
     font-size: 14px;
     line-height: 16px;
     background-color: transparent;
+    cursor: default;
 }
 .breadcrumbs a[href]:hover {
     color: rgb(255, 188, 158);
