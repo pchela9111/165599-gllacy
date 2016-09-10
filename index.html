@@ -6,7 +6,7 @@
     <title>HTML Academy: Глейси</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&subset=cyrillic" rel="stylesheet">
     <link href="css/normalize.css" rel="stylesheet">
-    <link href="css/style.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
 </head>
 
 <body>
@@ -164,13 +164,15 @@
                         <a class="underline" href="#">10 &nbsp;способов сервировки фруктовых щербетов <br>к столу</a>
                     </article>
                     <aside class="subscription">
-                        <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой не нужной ерунды. Честно =)
-                        </p>
-                        <form class="subscription-postal" action="/echo" method="post">
-                            <label class="hidden-signature" for="subscription-email">Электронная почта</label>
-                            <input type="email" placeholder="Электронная почта" id="subscription-email" name="email" required>
-                            <button class="btn-orange" type="submit">Отправить</button>
-                        </form>
+                       <div class="subscription-wrapper">
+                            <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой не нужной ерунды. Честно =)
+                            </p>
+                            <form class="subscription-postal" action="/echo" method="post">
+                                <label class="hidden-signature" for="subscription-email">Электронная почта</label>
+                                <input type="email" placeholder="Электронная почта" id="subscription-email" name="email" required>
+                                <button class="btn-orange" type="submit">Отправить</button>
+                            </form>
+                       </div>
                     </aside>
                 </section>
             </div>
