@@ -868,7 +868,7 @@ main .container {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    margin-bottom: 40px;
+    margin-bottom: 38px;
 }
 .blog {
     display: -webkit-box;
@@ -931,7 +931,8 @@ main .container {
 .subscription p {
     margin: 0;
     padding: 0;
-    padding: 35px 25px;
+    padding: 22px 25px;
+    padding-bottom: 35px;
 }
 .subscription form {
     width: 560px;
@@ -939,7 +940,7 @@ main .container {
 .subscription input[type="email"] {
     width: 342px;
     margin-left: 22px;
-    margin-bottom: 39px;
+    margin-bottom: 30px;
     padding: 10px;
     padding-left: 13px;
     font-size: inherit;
@@ -950,7 +951,7 @@ main .container {
     vertical-align: top;
     padding: 0 19px;
     height: 43px;
-    margin-left: 12px;
+    
 }
 
 /* карта*/
