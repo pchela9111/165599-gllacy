@@ -915,6 +915,7 @@ main .container {
     flex-direction: column;
     width: 560px;
     background-color: #f8f7f4;
+    background-image: -webkit-repeating-linear-gradient(313.5deg, #f8f7f4 0px, #f8f7f4 7px, #92cdff 7px, #92cdff 14px, #f8f7f4 14px, #f8f7f4 21px, #fe9e90 21px, #fe9e90 28px);
     background-image: repeating-linear-gradient(136.5deg, #f8f7f4 0px, #f8f7f4 7px, #92cdff 7px, #92cdff 14px, #f8f7f4 14px, #f8f7f4 21px, #fe9e90 21px, #fe9e90 28px);
     /*background-repeat: repeat;*/
      /*url("../img/mail-bg.png") no-repeat;*/
