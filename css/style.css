@@ -1862,13 +1862,14 @@ input[type="radio"][disabled] + label:hover::before {
     -ms-flex-pack: end;
     justify-content: flex-end;
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-    padding: 0 0 26px;
+    padding: 2px 0 27px;
+    margin-right: -7px;
 }
 .paginator a {
     -webkit-box-flex: 0;
     -ms-flex: 0 1 auto;
     flex: 0 1 auto;
-    margin: 2px;
+    margin: 1px;
     padding: 7px 9px;
     line-height: 13px;
     font-weight: 500;
@@ -1883,9 +1884,10 @@ input[type="radio"][disabled] + label:hover::before {
     width: 27px;
     height: 27px;
     font-size: 0;
+    margin: 1px 2px;
     background-color: rgba(255, 255, 255, 0.3);
     background: url("../img/sprite.svg") no-repeat;
-    background-position: -248px -39px;
+    background-position: -248px -38px;
 }
 .next {
     -webkit-transform: rotate(180deg);
