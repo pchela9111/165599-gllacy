@@ -952,9 +952,9 @@ main .container {
     display: -ms-flexbox;
     display: flex;
     min-height: 430px;
+    background-color: #eaeaea;
 }
 .map-img {
-    background-color: #eaeaea;
     background-image: url("../img/map.jpg");
     background-position: center center;
 }
