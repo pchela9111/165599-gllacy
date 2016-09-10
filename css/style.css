@@ -575,10 +575,10 @@ main .container {
     cursor: pointer;
 }
 .slider-controls label:hover {
-  background-color: #b2c1b7;
+    background-color: #b2c1b7;
 }
 .slider-controls label:active {
-  background-color: #ffffff;
+    background-color: #ffffff;
 }
 #btn-1:checked ~ .site-wrapper #slide1,
 #btn-2:checked ~ .site-wrapper #slide2,
