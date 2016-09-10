@@ -424,6 +424,7 @@ form label {
     display: none;
     position: absolute;
     padding: 20px 18px;
+    max-width: 240px;
     -webkit-transform: translate(-173px, 4px);
     transform: translate(-173px, 4px);
     border-radius: 5px;
